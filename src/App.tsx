@@ -20,7 +20,7 @@ const Navbar = () => (
       <li><Link to="/safe">SafeTransfer</Link></li>
       <li><Link to="/clickjacking">Clickjacking</Link></li>
       {/* <li><Link to="/protext-clickjacking">Protext Clickjacking</Link></li> */}
-      <li><Link to="/session-hijacking">Session Hijacking</Link></li>
+      {/* <li><Link to="/session-hijacking">Session Hijacking</Link></li> */}
       <li><Link to="/test">Jest Unit Test</Link></li>
     </ul>
   </nav>
